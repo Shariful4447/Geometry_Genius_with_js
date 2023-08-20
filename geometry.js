@@ -19,3 +19,26 @@ function calculateTriangleArea(){
     const areaSpan = document.getElementById('triangle-area');
     areaSpan.innerText = triangleArea;
 }
+
+function calculateRectangleArea(){
+
+    // get rectangle width
+    const widthField = document.getElementById('rectangle-width');
+    const widthValueText = widthField.value;
+    const width = parseFloat(widthValueText);
+    console.log(width);
+
+    // get triangle height
+    const lengthField = document.getElementById('rectangle-length');
+    const lengthValueText = lengthField.value;
+    const length = parseFloat(lengthValueText);
+    console.log(length);
+
+    // calculate area of triangle
+    const rectangleArea = width * length;
+    console.log(rectangleArea);
+
+    // Show triangle area
+    const areaSpan = document.getElementById('rectangle-area');
+    areaSpan.innerText = rectangleArea;
+}
