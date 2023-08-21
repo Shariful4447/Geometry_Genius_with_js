@@ -56,10 +56,12 @@ function calculateParrallelogramArea(){
     const height =getInputValue('parallel-height');
     console.log(height);
 
+    // Calculate area and set
     const area = base * height;
     console.log(area);
     setElementInnerText('parallelogram-area', area);
-
+    // Add to calculation Entry Area
+    addtoCalculationEntry('Parrallelogram', area);
 }
 // Reusable input value field in number
 function getInputValue(fieldId){
@@ -74,4 +76,20 @@ function setElementInnerText(elementId, area){
     const element = document.getElementById(elementId);
     element.innerText = area;
 
+}
+
+// Add to calculation EntryPoint
+// find the element whwere you want to dynamic html
+// create an element want to add
+// set inner html to element
+// append the child to the parent element
+function addtoCalculationEntry(areaType, area){
+    console.log(areaType+ ' ' +area);
+
+    const calculationEntry = document.getElementById('calculation-entry');
+
+    const count = calculationEntry.childElementCount;
+    const p = document.createElement('p');
+    p.innerHTML = `${count +1}. ${areaType} ${area}`
+    calculationEntry.appendChild(p);
 }
