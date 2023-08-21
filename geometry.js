@@ -34,6 +34,11 @@ function calculateRectangleArea(){
     const length = parseFloat(lengthValueText);
     console.log(length);
 
+    // Validate Input
+    if (isNaN(width) || isNaN(length)) {
+        alert('please insert a Number');
+        return;
+    }
     // calculate area of triangle
     const rectangleArea = width * length;
     console.log(rectangleArea);
